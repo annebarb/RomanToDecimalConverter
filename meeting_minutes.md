@@ -1,3 +1,3 @@
 ## Meeting minutes
-#### 01 Nov 2020
-- [ ] Establish an action plan for the project
+#### 02 Nov 2020
+- [x] Establish a minimal action plan and assign first tasks for the project
