@@ -13,9 +13,11 @@ def roman_to_decimal(roman_input):
     answer = 0
     count = 1
     sub_num = 0
+    sub_index = 0
 
     # Traverse through all characters backwards
     length = len(roman_input)
+    roman_input = roman_input.upper()
     for i in range(length - 1, -1, -1):
 
         # Rule that doesn't allow invalid roman characters
@@ -31,8 +33,9 @@ def roman_to_decimal(roman_input):
             return "V is never written to the left of X"
 
         # Rule that makes a roman numeral invalid if contains more then one subtraction
-        if value[roman_input[i]] == sub_num:
-            return "Cannot repeat a subtraction, invalid roman numeral"
+        if value[roman_input[i]] < sub_num:
+            return "A numeral of lower value, may not stand in front of a group of numerals in subtractive notation, " \
+                   "invalid roman numeral "
         else:
             sub_num = 0
 
@@ -42,8 +45,11 @@ def roman_to_decimal(roman_input):
 
         # If smaller than previous value
         else:
+            if sub_index - i == 2:
+                return "You cannot have two subtraction in a row, invalid roman numeral"
             answer -= value[roman_input[i]]
-            sub_num = value[roman_input[i]]
+            sub_num = value[roman_input[i+1]] - value[roman_input[i]]
+            sub_index = i
 
         # Update value
         if initial_value == value[roman_input[i]]:
