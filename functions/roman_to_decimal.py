@@ -8,7 +8,7 @@ def roman_to_decimal(roman_input):
              'D': 500,
              'M': 1000}
 
-    # Initialize previous character, character counter, subtraction execution, answer
+    # Initialize previous character, answer, character counter, subtraction execution
     initial_value = 0
     answer = 0
     count = 1
@@ -47,6 +47,8 @@ def roman_to_decimal(roman_input):
 
         # Update value
         if initial_value == value[roman_input[i]]:
+
+            # Rule that forbids the repetition of the V, D, L characters
             if roman_input[i] in "VDL":
                 return "'{}' numeral cannot be repeated".format(str(roman_input[i - 1]))
             count += 1
