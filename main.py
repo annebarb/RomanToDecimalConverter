@@ -62,7 +62,7 @@ print(roman_to_decimal('MCCXII'))   # 1212
 print(roman_to_decimal('MCMXCIX'))  # 1999
 print(roman_to_decimal('MMMCMXCIX'))# 3999
 
-print('All these should be invalid')
+print('\nAll these should be invalid')
 print(roman_to_decimal('MMMCMXCXI'))# Invalid
 print(roman_to_decimal('IXX'))      # Invalid
 print(roman_to_decimal('VVV'))      # Invalid
