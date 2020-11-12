@@ -4,14 +4,17 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     </head>
     <body>
-        <div id="container">
-            <h1>Convert decimal to Roman numeral</h1>
-            <input type="text" name="romInput" id="romInput" value="I"/>
-                <div id="buttons">
-                    <input type="button" id="convertButton" value="Convert"/>
-                    <input type="reset" id="resetButton" value="Reset"/>
-                </div>
-            <textarea name="decOutput" id="decOutput" cols="20" rows="1" readonly>1</textarea>
-        </div>
+        <form id="converter" action="/" method="POST">
+            <script type=text/javascript src="{{url_for('static', filename='scripts/main.js')}}"></script>
+            <div id="container">
+                <h1>Roman to decimal or decimal to Roman converter</h1>
+                <input type="text" name="Input" id="Input" placeholder="Enter roman or decimal value"/>
+                    <div id="buttons">
+                        <input type="button" id="convertButton" value="Convert"/>
+                        <input type="reset" id="resetButton" value="Reset"/>
+                    </div>
+                <textarea name="Output" id="Output" cols="20" rows="1" placeholder="Result" readonly></textarea>
+            </div>
+        </form>
     </body>
 </html>
