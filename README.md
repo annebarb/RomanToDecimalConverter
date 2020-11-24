@@ -30,9 +30,9 @@ See the below table the Symbol - Value pairs:
 - [Example](https://www.calculatorsoup.com/calculators/conversions/roman-numeral-converter.php)
 
 ### Project tasks
-- [ ] KickOff Meeting topics
-    - Agree on a schedule for these meetings (Weekly meetings on Tuesday 11:30 Pm)
-    - Agree on a time frame for the project ([Ongoing] deadline)
+- [x] KickOff Meeting topics
+    - Agree on a schedule for these meetings (Weekly meetings on Tuesday 11:30 Am)
+    - Agree on a time frame for the project (22 Dec 2020)
 - [ ] Discuss task distribution
 
 |Task|Owner|Current Status|
@@ -40,6 +40,7 @@ See the below table the Symbol - Value pairs:
 |Organize kickoff meeting|@asoncutean|**TBD**|
 |Create some basic common objectives|@asoncutean/@bsurd|**Ongoing**|
 |Add remaining developers to project and grant access|@bsurd|:heavy_check_mark:|
-|Create a basic function that coverts the roman numerals to arabic ones |@asoncutean|**Assigned**|
-|Create the UI site base running on a localhost|@bsurd|**Assigned**|
-|
+|Create a basic function that converts the roman numerals to arabic numbers|@asoncutean|**Assigned**|
+|Create the UI site base running on a localhost|@bsurd|:heavy_check_mark:|
+|Link function to the buttons|@bsurd|**Assigned**|
+|Create unit tests to cover the roman numeral conversation function|@asoncutean|**Assigned**|
