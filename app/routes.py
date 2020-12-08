@@ -7,12 +7,13 @@ from functions.roman_to_decimal import *
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
+        entered_value = request.form['Input']
         try:
-            value = decimal_to_roman(int(request.form['Input']))
+            value = decimal_to_roman(int(entered_value))
         except:
-            value = roman_to_decimal(request.form['Input'])
+            value = roman_to_decimal(entered_value)
         print(value)
-        return render_template('index.html', title='Converter', result=value)
+        return render_template('index.html', title='Converter', entered_value=entered_value, result=value)
     else:
         return render_template('index.html', title='Converter')
 

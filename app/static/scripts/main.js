@@ -4,14 +4,13 @@ function enterPressed() {
         event.preventDefault();
         if (event.keyCode === 13) {
             document.getElementById('convertButton').click();
-            document.getElementById('Output').textContent = "{{result}}";
+            document.getElementById('Output').textContent = "{{ result }}";
         }});
 }
 
 
 function buttonClick() {
-    document.getElementById('Input')
-    document.getElementById('Output').textContent = "{{result}}";
+    document.getElementById('Output').textContent = "{{ result }}";
 }
 
 function main() {

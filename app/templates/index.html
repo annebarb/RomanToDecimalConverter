@@ -9,16 +9,39 @@
         <form id="converter" action="/" method="POST">
             <div id="container">
                 <h1>Converter!!!</h1>
-                <input type="text" name="Input" id="Input" placeholder="Feed me values"/>
+                <input type="text" name="Input" id="Input" placeholder="Feed me values" value="{{ entered_value }}"/>
                     <div id="buttons">
                         <input type="button" id="convertButton" value="Convert"/>
                         <input type="reset" id="resetButton" value="Reset"/>
                     </div>
-                <textarea name="Output" id="Output" cols="20" rows="1" placeholder="Result" readonly></textarea>
+                <textarea name="Output" id="Output" cols="20" rows="1" placeholder="Result" value={{ result }} readonly></textarea>
             </div>
         </form>
     </body>
 </html>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type=text/javascript src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+<script type=text/javascript">
+    function enterPressed() {
+    document.getElementById('Input')
+        .addEventListener('keyup', function(event) {
+        event.preventDefault();
+        if (event.keyCode === 13) {
+            document.getElementById('convertButton').click();
+        }});
+    }
+
+    function buttonClick() {
+        document.getElementById('Output').value = "{{ result }}";
+    }
+
+    function buttonClick() {
+        document.getElementById('Output').value = "{{ result }}";
+    }
+
+    function main() {
+      document.getElementById("convertButton").addEventListener("click", buttonClick);
+    }
+
+    document.addEventListener("DOMContentLoaded", main);
+</script>
